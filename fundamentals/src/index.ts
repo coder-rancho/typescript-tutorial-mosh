@@ -30,3 +30,14 @@ console.log(mySize, myColor); // 2 #ffffff
 
 
 
+/* Functions */
+function calcTax(income: number): number /*return type*/ {
+    // let x;                                              // Error: 'x' is declared but its value is never read.
+    if (income > 5_00_000)
+        return income*0.3;
+    return 0; 
+}
+
+function countChars(str = "" /* default parameter */): number {
+    return str.length;
+}
