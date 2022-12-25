@@ -41,3 +41,19 @@ function calcTax(income: number): number /*return type*/ {
 function countChars(str = "" /* default parameter */): number {
     return str.length;
 }
+
+
+
+/* Objects */
+let employee: {
+    readonly id: number,
+    name: string,
+    phoneNumber?: string
+    retire?: (date: Date) => void
+};
+// employee = { id: 1};                // Error: Property 'name' is missing
+employee = {id: 1, name: "Naman"}      // No Error: phoneNumber is optional
+employee.phoneNumber = "+91 9789834524"
+// employee.id = 2;                       // Error: Cannot assign to 'id' because it is a read-only property
+employee.retire = (date: Date) => console.log(date)
+employee.retire(new Date(Date.now()))

@@ -21,4 +21,17 @@ let mySize = Size.medium;
 ;
 let myColor = "#ffffff";
 console.log(mySize, myColor);
+function calcTax(income) {
+    if (income > 500000)
+        return income * 0.3;
+    return 0;
+}
+function countChars(str = "") {
+    return str.length;
+}
+let employee;
+employee = { id: 1, name: "Naman" };
+employee.phoneNumber = "+91 9789834524";
+employee.retire = (date) => console.log(date);
+employee.retire(new Date(Date.now()));
 //# sourceMappingURL=index.js.map
